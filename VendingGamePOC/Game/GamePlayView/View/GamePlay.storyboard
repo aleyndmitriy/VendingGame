@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Yh-Gm-eVp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game Play View Controller-->
+        <scene sceneID="LfY-PK-QBj">
+            <objects>
+                <viewController id="9Yh-Gm-eVp" customClass="GamePlayViewController" customModule="VendingGamePOC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Ev-DQ-Tee">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EsQ-PA-ZaA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="75"/>
+                                <color key="backgroundColor" red="0.1450980392" green="0.18823529410000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="dac-7T-9JZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IH7-K3-RwL" customClass="SKView">
+                                <rect key="frame" x="0.0" y="119" width="414" height="693"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUK-86-ffw" userLabel="ButtonView">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbJ-FR-Mkp">
+                                        <rect key="frame" x="137" y="5" width="140" height="45"/>
+                                        <color key="backgroundColor" red="0.1450980392" green="0.18823529410000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="3ha-Gb-eCQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="35"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Menu">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnMenuTouched:" destination="9Yh-Gm-eVp" eventType="touchUpInside" id="DdE-Xd-JfL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1450980392" green="0.18823529410000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0Dg-Kl-9TC"/>
+                                    <constraint firstAttribute="bottom" secondItem="AbJ-FR-Mkp" secondAttribute="bottom" id="HkM-YX-EF7"/>
+                                    <constraint firstItem="AbJ-FR-Mkp" firstAttribute="centerX" secondItem="pUK-86-ffw" secondAttribute="centerX" id="Mmo-Sz-3ar"/>
+                                    <constraint firstItem="AbJ-FR-Mkp" firstAttribute="top" secondItem="pUK-86-ffw" secondAttribute="top" constant="5" id="Mnb-J4-zHv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MMa-Nz-05F"/>
+                        <color key="backgroundColor" red="0.1450980392" green="0.18823529410000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="EsQ-PA-ZaA" firstAttribute="top" secondItem="MMa-Nz-05F" secondAttribute="top" id="74y-Dw-j07"/>
+                            <constraint firstItem="IH7-K3-RwL" firstAttribute="leading" secondItem="MMa-Nz-05F" secondAttribute="leading" id="Isw-bg-Lz1"/>
+                            <constraint firstItem="MMa-Nz-05F" firstAttribute="trailing" secondItem="EsQ-PA-ZaA" secondAttribute="trailing" id="Ori-F7-HtF"/>
+                            <constraint firstItem="pUK-86-ffw" firstAttribute="leading" secondItem="MMa-Nz-05F" secondAttribute="leading" id="SIc-up-XH4"/>
+                            <constraint firstItem="EsQ-PA-ZaA" firstAttribute="leading" secondItem="MMa-Nz-05F" secondAttribute="leading" id="Tg7-cM-nrq"/>
+                            <constraint firstItem="pUK-86-ffw" firstAttribute="trailing" secondItem="MMa-Nz-05F" secondAttribute="trailing" id="YZL-GU-986"/>
+                            <constraint firstItem="pUK-86-ffw" firstAttribute="top" secondItem="IH7-K3-RwL" secondAttribute="bottom" id="abb-QY-f6u"/>
+                            <constraint firstItem="IH7-K3-RwL" firstAttribute="top" secondItem="EsQ-PA-ZaA" secondAttribute="bottom" id="bTC-9T-6TM"/>
+                            <constraint firstItem="MMa-Nz-05F" firstAttribute="trailing" secondItem="IH7-K3-RwL" secondAttribute="trailing" id="cQS-Ac-CSv"/>
+                            <constraint firstItem="MMa-Nz-05F" firstAttribute="bottom" secondItem="pUK-86-ffw" secondAttribute="bottom" id="wbi-rG-L80"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnMenu" destination="AbJ-FR-Mkp" id="j7G-6G-NDP"/>
+                        <outlet property="spritesView" destination="IH7-K3-RwL" id="QeU-Pt-o6y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sPN-0l-ZMf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340.57971014492756" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Gamer" representedClassName=".Gamer" syncable="YES">
+        <attribute name="birthday" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="scores" toMany="YES" deletionRule="Cascade" destinationEntity="Score" inverseName="owner" inverseEntity="Score"/>
+    </entity>
+    <entity name="Score" representedClassName=".Score" syncable="YES">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="level" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES"/>
+        <attribute name="points" attributeType="Integer 32" defaultValueString="5" usesScalarValueType="YES"/>
+        <relationship name="owner" maxCount="1" deletionRule="Nullify" destinationEntity="Gamer" inverseName="scores" inverseEntity="Gamer"/>
+    </entity>
+    <elements>
+        <element name="Gamer" positionX="333.5642700195312" positionY="-7.30426025390625" width="128" height="74"/>
+        <element name="Score" positionX="110.8404541015625" positionY="14.22503662109375" width="128" height="89"/>
+    </elements>
+</model>

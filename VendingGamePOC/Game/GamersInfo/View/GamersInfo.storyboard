@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gamers Info View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="GamersInfoViewController" customModule="VendingGamePOC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main" translatesAutoresizingMaskIntoConstraints="NO" id="SaC-fH-eIf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dND-H1-J4o">
+                                <rect key="frame" x="0.0" y="69" width="414" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="A36-eM-4vH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User's Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ran-WH-Udq" customClass="UnderlinedTextField" customModule="VendingGamePOC" customModuleProvider="target">
+                                <rect key="frame" x="50" y="129" width="314" height="45"/>
+                                <color key="backgroundColor" red="1" green="0.75872781251959376" blue="0.94986122875487478" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="PbJ-HL-VqU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
+                                        <color key="value" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfS-lR-WAe">
+                                <rect key="frame" x="10" y="209" width="394" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="35"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DCX-EB-wda">
+                                <rect key="frame" x="10" y="767" width="394" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgR-PT-GgS">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="75"/>
+                                        <color key="backgroundColor" red="0.14509803921568626" green="0.18823529411764706" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="35"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnCancelTouched:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hka-wn-WEx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBu-Uo-aCJ">
+                                        <rect key="frame" x="202" y="0.0" width="192" height="75"/>
+                                        <color key="backgroundColor" red="0.14509803921568626" green="0.18823529411764706" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="35"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Ok">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnOkTouched:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ba4-QN-F9c"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="UmJ-bS-wt2"/>
+                                    <constraint firstItem="PBu-Uo-aCJ" firstAttribute="width" secondItem="hgR-PT-GgS" secondAttribute="width" id="axF-5c-Gct"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bfS-lR-WAe" secondAttribute="trailing" constant="10" id="4ce-ES-dmf"/>
+                            <constraint firstItem="dND-H1-J4o" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="7A5-FW-kwF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="DCX-EB-wda" secondAttribute="bottom" constant="20" id="Der-Tr-KEL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ran-WH-Udq" secondAttribute="trailing" constant="50" id="Rvx-0i-49V"/>
+                            <constraint firstItem="DCX-EB-wda" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="b1i-jN-wuz"/>
+                            <constraint firstItem="bfS-lR-WAe" firstAttribute="top" secondItem="ran-WH-Udq" secondAttribute="bottom" constant="35" id="dnb-dT-VJo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DCX-EB-wda" secondAttribute="trailing" constant="10" id="doI-pq-wHl"/>
+                            <constraint firstItem="ran-WH-Udq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="gFw-a2-O7K"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dND-H1-J4o" secondAttribute="trailing" id="jPX-E4-1m1"/>
+                            <constraint firstAttribute="bottom" secondItem="SaC-fH-eIf" secondAttribute="bottom" id="lZn-pK-gef"/>
+                            <constraint firstItem="ran-WH-Udq" firstAttribute="top" secondItem="dND-H1-J4o" secondAttribute="bottom" constant="30" id="oMC-wE-5su"/>
+                            <constraint firstItem="dND-H1-J4o" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="pBm-97-ONa"/>
+                            <constraint firstItem="SaC-fH-eIf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="pf7-aU-SSU"/>
+                            <constraint firstItem="bfS-lR-WAe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="sEA-14-gnj"/>
+                            <constraint firstItem="SaC-fH-eIf" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="upS-3V-p3f"/>
+                            <constraint firstItem="SaC-fH-eIf" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="z2o-8s-WIc"/>
+                        </constraints>
+                        <connections>
+                            <action selector="backgroundTapInside:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SMd-y0-lpg"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="btnCancel" destination="hgR-PT-GgS" id="PFQ-PG-LvX"/>
+                        <outlet property="btnOk" destination="PBu-Uo-aCJ" id="tbs-dL-grd"/>
+                        <outlet property="lblEnterName" destination="dND-H1-J4o" id="mKB-am-G6C"/>
+                        <outlet property="lblMessage" destination="bfS-lR-WAe" id="kq8-CB-liI"/>
+                        <outlet property="txtGamersName" destination="ran-WH-Udq" id="GUf-5F-N1Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="main" width="960" height="1810"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
